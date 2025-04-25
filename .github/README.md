@@ -102,7 +102,7 @@ sequenceDiagram
 - You might have to disable caching of the _iframe_ on your web, or changes on Steam won't be reflected immediately.
 
 
-> [!NOTICE]
+> [!IMPORTANT]
 > **Show some love to the Original Creator** \
 > If you decide to use this tool, I'd love to see you show it off in [Discussion](https://github.com/gamer2810/steam-miniprofile/discussions/categories/show-and-tell). \
 > If the tool does not work, please open an [Issue](https://github.com/gamer2810/steam-miniprofile/issues/new) and I will take a look.
