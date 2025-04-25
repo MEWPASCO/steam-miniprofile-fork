@@ -26,20 +26,20 @@ This tool only shows **PUBLIC** information of your Steam account and therefore 
 
 2. Replace *YOUR_ACCOUNTID_HERE* with the ID acquired from step 1
 ```html
- https://gamer2810.github.io/steam-miniprofile/?accountId=YOUR_ACCOUNTID_HERE
+ https://mewpasco.github.io/steam-miniprofile-fork/?accountId=YOUR_ACCOUNTID_HERE
 ```
 Examples: 
-- https://gamer2810.github.io/steam-miniprofile/?accountId=238158335
-- https://gamer2810.github.io/steam-miniprofile/?accountId=76561198198424063
-- https://gamer2810.github.io/steam-miniprofile/?accountId=STEAM_1:1:119079167
-- https://gamer2810.github.io/steam-miniprofile/?accountId=[U:1:238158335]
+- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=238158335
+- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=76561198198424063
+- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=STEAM_1:1:119079167
+- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=[U:1:238158335]
 
 ### Internationalization / Change Language
 Add query parameter `lang` in your URL.
 
 Example: 
 
-https://gamer2810.github.io/steam-miniprofile/?lang=schinese
+https://mewpasco.github.io/steam-miniprofile-fork/?lang=schinese
 
 Available languages: `bulgarian,danish,english,french,greek,italian,koreana,polish,brazilian,russian,latam,swedish,tchinese,ukrainian,czech,dutch,finnish,german,hungarian,japanese,norwegian,portuguese,romanian,schinese,spanish,thai,turkish,vietnamese`
 
@@ -52,7 +52,7 @@ Example:
 ![image](https://github.com/user-attachments/assets/6fa1b661-deb2-46d0-ada1-8abbd69a9aa7)
 
 
-https://gamer2810.github.io/steam-miniprofile/?accountId=80655735&appId=1361210
+https://mewpasco.github.io/steam-miniprofile-fork/?accountId=80655735&appId=1361210
 
 #### Notes:
 - You **MUST** have your `Game details` privacy settings set to `Public`
@@ -64,12 +64,12 @@ You can make the content clickable and open your steam profile on click using `i
 Example: `https://steamcommunity.com/id/mewpasco` -> vanityId = `mewpasco`
 2. `interactive=true`
 
-Full example: `https://gamer2810.github.io/steam-miniprofile/?interactive=true&vanityId=mewpasco`
+Full example: `https://mewpasco.github.io/steam-miniprofile-fork/?interactive=true&vanityId=mewpasco`
 
 ### To add this to your site
 1.   You can load it into any div with JQuery or Javascript. [Jquery's Load() guide](https://www.tutorialspoint.com/How-to-load-external-HTML-into-a-div-using-jQuery).
 2.  You can also load it as an _iframe_  
-    >   `<iframe src="https://gamer2810.github.io/steam-miniprofile/?accountId=YOUR_ACCOUNTID_HERE" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>`
+    >   `<iframe src="https://mewpasco.github.io/steam-miniprofile-fork/?accountId=YOUR_ACCOUNTID_HERE" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>`
 -   Once it's loaded, you can mod it however you like using CSS.
 -   A working example can be found at [My site](https://avariaxyz.win/).
 
