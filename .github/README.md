@@ -1,3 +1,13 @@
+> [!CAUTION]
+> # ⚠️ **Disclaimer**  
+> This is **not my original project**.  
+> It is a **fork** of [steam-miniprofile](https://github.com/gamer2810/steam-miniprofile) with personal customizations.  
+> All credit goes to the original creator(s).
+
+# Contact me through Discord
+
+[![Discord](https://img.shields.io/discord/1196075698301968455?style=social&logo=discord&label=ΛVΛRIΛ)](https://discord.gg/avia)
+
 # A little tool to feature Steam's miniprofile on your website 
 
 This is a tool that loads your miniprofile(*with animated background and frame*) as a HTML entity so that you can feature it on your website.
@@ -7,7 +17,7 @@ This tool only shows **PUBLIC** information of your Steam account and therefore 
 ### Preview:  
 ![Preview GIF](preview.gif)
 
-## See it in action on my website: https://ark.k3k.dev/
+## See it in action on my website: https://avariaxyz.win/
 
 ## Guide
 
@@ -51,17 +61,17 @@ https://gamer2810.github.io/steam-miniprofile/?accountId=80655735&appId=1361210
 ### Interactive
 You can make the content clickable and open your steam profile on click using `interactive` and `vanityId` search params.
 1. `vanityId` is what comes after your normal steamcommunity links 
-Example: `https://steamcommunity.com/id/k3k2810` -> vanityId = `k3k2810`
+Example: `https://steamcommunity.com/id/mewpasco` -> vanityId = `mewpasco`
 2. `interactive=true`
 
-Full example: `https://gamer2810.github.io/steam-miniprofile/?interactive=true&vanityId=k3k2810`
+Full example: `https://gamer2810.github.io/steam-miniprofile/?interactive=true&vanityId=mewpasco`
 
 ### To add this to your site
 1.   You can load it into any div with JQuery or Javascript. [Jquery's Load() guide](https://www.tutorialspoint.com/How-to-load-external-HTML-into-a-div-using-jQuery).
 2.  You can also load it as an _iframe_  
     >   `<iframe src="https://gamer2810.github.io/steam-miniprofile/?accountId=YOUR_ACCOUNTID_HERE" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>`
 -   Once it's loaded, you can mod it however you like using CSS.
--   A working example can be found at [My site](https://gamer2810.github.io/prologue/).
+-   A working example can be found at [My site](https://avariaxyz.win/).
 
 ### How it works
 ```mermaid
@@ -91,11 +101,6 @@ sequenceDiagram
 - If your AccountID is invalid, it will instead load *MY* (as in the one writing this) miniprofile :).
 - You might have to disable caching of the _iframe_ on your web, or changes on Steam won't be reflected immediately.
 
-#### Contact
+#### Show some love to the Original Creator
 1. If you decide to use this tool, I'd love to see you show it off in [Discussion](https://github.com/gamer2810/steam-miniprofile/discussions/categories/show-and-tell).
 2. If the tool does not work, please open an [Issue](https://github.com/gamer2810/steam-miniprofile/issues/new) and I will take a look.
-
-*_Have a good day_*  and
-<sub>~~Please feed me a star if you are feeling generous. I'm _humgry_~~</sub>
-
-[![Star History Chart](https://api.star-history.com/svg?repos=gamer2810/steam-miniprofile&type=Date)](https://star-history.com/#gamer2810/steam-miniprofile&Date)

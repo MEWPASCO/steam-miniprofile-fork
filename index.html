@@ -6,6 +6,19 @@
 
 
 <head>
+  <style>
+    .custom-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      z-index: -1;
+      pointer-events: none;
+    }
+  </style>
   <link async rel="preload" as="style"
     href="https://community.cloudflare.steamstatic.com/public/shared/css/shared_global.css"
     onload="this.onload=null;this.rel='stylesheet'">
@@ -56,8 +69,34 @@
               window.open(steamURL, '_blank');
           });
         }
-      });
 
+
+        <!-- Background Image to fill in space behind the Widget -->
+        let doc = new DOMParser().parseFromString(data, "text/html");
+        let videoSource = doc.querySelector("video source[type='video/mp4']");
+        let imageFallback = doc.querySelector("img.miniprofile_backgroundblur");
+
+        let backgroundUrl = videoSource?.src || imageFallback?.src;
+
+        if (backgroundUrl) {
+          const bgElement = document.createElement(videoSource ? 'video' : 'img');
+    
+        if (videoSource) {
+          bgElement.src = backgroundUrl;
+          bgElement.autoplay = true;
+          bgElement.muted = true;
+          bgElement.loop = true;
+          bgElement.playsInline = true;
+        } else {
+          bgElement.src = backgroundUrl;
+        }
+
+        bgElement.className = "custom-background";
+        document.body.prepend(bgElement);
+        }
+
+
+      });
     });
   </script>
 </head>
