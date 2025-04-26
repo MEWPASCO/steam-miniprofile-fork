@@ -105,8 +105,7 @@ sequenceDiagram
 
 > [!IMPORTANT]
 > **Show some love to the Original Creator** \
-> If you decide to use this tool, I'd love to see you show it off in [Discussion](https://github.com/gamer2810/steam-miniprofile/discussions/categories/show-and-tell). \
-> 
+> If you decide to use this tool, I'd love to see you show it off in [Discussion](https://github.com/gamer2810/steam-miniprofile/discussions/categories/show-and-tell).
 
 ### Issues
 If the tool does not work, please open an [Issue](https://github.com/mewpasco/steam-miniprofile-fork/issues/new) and I will take a look.
