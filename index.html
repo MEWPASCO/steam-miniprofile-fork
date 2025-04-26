@@ -7,17 +7,38 @@
 
 <head>
   <style>
-    .custom-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 16px;
-      z-index: -1;
-      pointer-events: none;
-    }
+  .widget-box {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+    margin: 100px auto;
+  }
+
+  .background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .background-wrapper video,
+  .background-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  #includedContent {
+    position: relative;
+    z-index: 1;
+    padding: 8px;
+  }
   </style>
   <link async rel="preload" as="style"
     href="https://community.cloudflare.steamstatic.com/public/shared/css/shared_global.css"
@@ -92,7 +113,7 @@
         }
 
         bgElement.className = "custom-background";
-        document.body.prepend(bgElement);
+        document.querySelector('.background-wrapper').appendChild(bgElement);
         }
 
 
@@ -101,8 +122,11 @@
   </script>
 </head>
 
-<body style="margin:0; display:flex; align-items:center; justify-content:flex-start; background: transparent; padding-left: 100px; padding-top: 100px;">
-  <div id="includedContent"></div>
+<body style="margin:0; background: transparent;">
+  <div class="widget-box">
+    <div class="background-wrapper"></div>
+    <div id="includedContent"></div>
+  </div>
   <!-- default miniprofile while waiting for the real one to load -->
   <!-- cache to help with load time -->
   <div class="miniprofile_container default">
