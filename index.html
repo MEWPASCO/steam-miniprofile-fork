@@ -7,37 +7,36 @@
 
 <head>
   <style>
-  .widget-box {
+  .steam-widget {
     position: relative;
     width: 360px;
     height: 360px;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
-    margin: 100px auto;
   }
 
-  .background-wrapper {
+  .background-layer {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
+    overflow: hidden;
+    border-radius: 0; /* No fancy border here */
   }
 
-  .background-wrapper video,
-  .background-wrapper img {
+  .background-layer video,
+  .background-layer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 16px;
   }
 
   #includedContent {
     position: relative;
     z-index: 1;
-    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
   </style>
   <link async rel="preload" as="style"
@@ -113,7 +112,7 @@
         }
 
         bgElement.className = "custom-background";
-        document.querySelector('.background-wrapper').appendChild(bgElement);
+        document.querySelector('.background-layer').appendChild(bgElement);
         }
 
 
@@ -122,9 +121,9 @@
   </script>
 </head>
 
-<body style="margin:0; background: transparent;">
-  <div class="widget-box">
-    <div class="background-wrapper"></div>
+<body style="margin: 0; background: #111; display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div class="steam-widget">
+    <div class="background-layer"></div>
     <div id="includedContent"></div>
   </div>
   <!-- default miniprofile while waiting for the real one to load -->
