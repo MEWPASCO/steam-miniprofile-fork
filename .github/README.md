@@ -62,8 +62,8 @@ https://mewpasco.github.io/steam-miniprofile-fork/?accountId=80655735&appId=1361
 You can make the content clickable and open your steam profile on click using `interactive` and `vanityId` search params.
 1. `vanityId` is what comes after your normal steamcommunity links 
 Example: `https://steamcommunity.com/id/mewpasco` -> vanityId = `mewpasco`
-2. `interactive=true`
-You can also add your favorite game to the mix like in the example down below!
+2. `interactive=true` \
+3. `&appId=1085660` at the end to go full on with your favorite game on top!
 
 Full example: https://mewpasco.github.io/steam-miniprofile-fork/?interactive=true&vanityId=mewpasco&appId=1085660
 
