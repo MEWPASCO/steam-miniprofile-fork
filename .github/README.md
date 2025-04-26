@@ -63,8 +63,9 @@ You can make the content clickable and open your steam profile on click using `i
 1. `vanityId` is what comes after your normal steamcommunity links 
 Example: `https://steamcommunity.com/id/mewpasco` -> vanityId = `mewpasco`
 2. `interactive=true`
+You can also add your favorite game to the mix like in the example down below!
 
-Full example: `https://mewpasco.github.io/steam-miniprofile-fork/?interactive=true&vanityId=mewpasco`
+Full example: https://mewpasco.github.io/steam-miniprofile-fork/?interactive=true&vanityId=mewpasco&appId=1085660
 
 ### To add this to your site
 1.   You can load it into any div with JQuery or Javascript. [Jquery's Load() guide](https://www.tutorialspoint.com/How-to-load-external-HTML-into-a-div-using-jQuery).
