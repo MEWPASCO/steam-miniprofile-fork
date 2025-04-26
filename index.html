@@ -78,29 +78,9 @@
       }
 
       $.get(corsURL, function (data) {
-        $("#includedContent").html(data).hide();
-        if ($("#includedContent").children().text().length != 0) {
-          $(".default").fadeOut("fast", function () {
-            $("#includedContent").html(data).fadeIn("fast");
-          });
-
-          window.parent.postMessage(
-            {
-              state:"loaded"
-            }, {
-            targetOrigin: '*',
-          })
-        }
-        
-        if(interactive && vanityId) {
-          document.body.style.cursor = "pointer";
-          $(document).on('click', 'div.miniprofile_container', function(e){ 
-              e.preventDefault(); 
-              var url = $(this).attr('href'); 
-              window.open(steamURL, '_blank');
-          });
-        }
-
+        if ($(data).text().trim().length !== 0) {
+        $("#includedContent .default").remove();
+        $("#includedContent").append(data).hide().fadeIn("fast");
 
         <!-- Background Image to fill in space behind the Widget -->
         let doc = new DOMParser().parseFromString(data, "text/html");
@@ -126,10 +106,25 @@
         document.querySelector('.background-layer').appendChild(bgElement);
         }
 
-
+          window.parent.postMessage(
+            {
+              state:"loaded"
+            }, {
+            targetOrigin: '*',
+            });
+        }
+        
+        if(interactive && vanityId) {
+          document.body.style.cursor = "pointer";
+          $(document).on('click', 'div.miniprofile_container', function(e){ 
+              e.preventDefault(); 
+              var url = $(this).attr('href'); 
+              window.open(steamURL, '_blank');
+          });
+        }
       });
-    });
-  </script>
+    })
+</script>
 </head>
 
 <body style="margin: 0; background: #111; display: flex; justify-content: center; align-items: center; height: 100vh;">
