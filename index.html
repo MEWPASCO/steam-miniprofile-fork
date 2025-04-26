@@ -40,7 +40,9 @@
   }
 
   .widget-inner {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -48,7 +50,7 @@
     justify-content: center;
     align-items: center;
   }
-  </style>
+</style>
   <link async rel="preload" as="style"
     href="https://community.cloudflare.steamstatic.com/public/shared/css/shared_global.css"
     onload="this.onload=null;this.rel='stylesheet'">
@@ -79,8 +81,7 @@
         $("#includedContent").html(data).hide();
         if ($("#includedContent").children().text().length != 0) {
           $(".default").fadeOut("fast", function () {
-            $(".default").replaceWith(`<div class="widget-inner">${data}</div>`);
-            $(".default").fadeIn("fast");
+            $("#includedContent").html(data).fadeIn("fast");
           });
 
           window.parent.postMessage(
@@ -134,7 +135,8 @@
 <body style="margin: 0; background: #111; display: flex; justify-content: center; align-items: center; height: 100vh;">
   <div class="steam-widget">
     <div class="background-layer"></div>
-    <div id="includedContent"></div>
+    <div class="widget-inner" id="includedContent"></div>
+  </div>
   </div>
   <!-- default miniprofile while waiting for the real one to load -->
   <!-- cache to help with load time -->
