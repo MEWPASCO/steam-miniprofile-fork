@@ -1,7 +1,7 @@
 > [!CAUTION]
 > # ⚠️ **Disclaimer**  
 > This is **not my original project**.  
-> It is a **fork** of [steam-miniprofile](https://github.com/gamer2810/steam-miniprofile) with personal customizations.  
+> It is a **fork** of [steam-miniprofile](https://github.com/mewpasco/steam-miniprofile-fork) with personal customizations.  
 > All credit goes to the original creator(s).
 
 # Contact me through Discord
@@ -29,10 +29,10 @@ This tool only shows **PUBLIC** information of your Steam account and therefore 
  https://mewpasco.github.io/steam-miniprofile-fork/?accountId=YOUR_ACCOUNTID_HERE
 ```
 Examples: 
-- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=238158335
-- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=76561198198424063
-- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=STEAM_1:1:119079167
-- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=[U:1:238158335]
+- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=846635687
+- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=76561198806901415
+- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=STEAM_1:1:423317843
+- https://mewpasco.github.io/steam-miniprofile-fork/?accountId=[U:1:846635687]
 
 ### Internationalization / Change Language
 Add query parameter `lang` in your URL.
@@ -76,19 +76,19 @@ Full example: `https://mewpasco.github.io/steam-miniprofile-fork/?interactive=tr
 ### How it works
 ```mermaid
 sequenceDiagram
-    User->>+gamer2810.github.io: Get Steam Miniprofile
+    User->>+mewpasco.github.io: Get Steam Miniprofile
     loop Every 5 minutes
         Note right of Pipedream: Glitch shutdowns the CORS Server<br>every 5 minutes, so we schedule a request<br> every 5 mins to wake it up, ensuring response time
         Pipedream->>CORS Server: Wake up
     end
-    gamer2810.github.io->>-User: Return loading miniprofile
+    mewpasco.github.io->>-User: Return loading miniprofile
     Note right of User: Wait for real profile to load
-    gamer2810.github.io->>+CORS Server: Get real profile HTML
+    mewpasco.github.io->>+CORS Server: Get real profile HTML
     Note right of CORS Server: https://glitch.com/~steam-miniprofile-cors
     CORS Server->>+Steam: Get real profile HTML
     Steam->>-CORS Server: Requested HTML
-    CORS Server->>-gamer2810.github.io:Profile HTML with CORS headers
-    gamer2810.github.io-->User: Replace loading miniprofile with real HTML
+    CORS Server->>-mewpasco.github.io:Profile HTML with CORS headers
+    mewpasco.github.io-->User: Replace loading miniprofile with real HTML
 
 ```
 
@@ -105,4 +105,7 @@ sequenceDiagram
 > [!IMPORTANT]
 > **Show some love to the Original Creator** \
 > If you decide to use this tool, I'd love to see you show it off in [Discussion](https://github.com/gamer2810/steam-miniprofile/discussions/categories/show-and-tell). \
-> If the tool does not work, please open an [Issue](https://github.com/gamer2810/steam-miniprofile/issues/new) and I will take a look.
+> 
+
+### Issues
+If the tool does not work, please open an [Issue](https://github.com/mewpasco/steam-miniprofile-fork/issues/new) and I will take a look.
