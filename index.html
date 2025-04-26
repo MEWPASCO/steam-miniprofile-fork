@@ -79,7 +79,7 @@
 
       $.get(corsURL, function (data) {
         if ($(data).text().trim().length !== 0) {
-        $("#includedContent .default").remove();
+        $(".miniprofile_container.default").remove();
         $("#includedContent").append(data).hide().fadeIn("fast");
 
         <!-- Background Image to fill in space behind the Widget -->
